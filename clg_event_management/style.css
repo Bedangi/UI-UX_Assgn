@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    background-color: #8b0000; /* dark red like the image */
+    color: white;
+    padding: 15px 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    background-color: #b22222; /* slightly lighter red */
+    padding: 10px 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+h2 {
+    color: #8b0000;
+}
+
+footer {
+    background-color: #8b0000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #8b0000;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 7px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #b22222;
+}
