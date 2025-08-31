@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronicles</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+    <h1>Chronicles 2K25</h1>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="registration.html">Registration</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact & FAQs</a>
+</nav>
+
+<div class="container">
+    <h2>Participant Registration Form</h2>
+    <form action="#" method="post">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="event">Select Event:</label>
+        <select id="event" name="event" required>
+            <option value="">--Select--</option>
+            <option value="quiz">Quiz Contest</option>
+            <option value="debate">Debate Competition</option>
+            <option value="art">Art and Craft Exhibition</option>
+            <option value="sports">Sports Meet</option>
+            <option value="music">Music and Dance</option>
+            <option value="science">Science Fair</option>
+        </select>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+
+        <input type="submit" value="Register" />
+    </form>
+</div>
+
+<footer>
+    &copy; 2025 Chronicles, TIET
+</footer>
+</body>
+</html>
