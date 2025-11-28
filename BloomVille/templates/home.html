@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bloomville - Your Magical Flower Adventure</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+        <link rel="stylesheet" href="../static/style.css" >
+
+        <script src="../static/script.js" defer></script>
+    </head>
+
+    <body class="font-display">
+        <div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+            <div class="layout-container flex h-full grow flex-col">
+                <div class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+                    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                        
+                        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 dark:border-primary/30 px-6 sm:px-10 py-3">
+                            <div class="flex items-center gap-4 text-slate-900 dark:text-white">
+                                <div class="size-6 text-primary">
+                                    <span class="material-symbols-outlined !text-3xl">local_florist</span>
+                                </div>
+                                <h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Bloomville</h2>
+                            </div>
+
+                            <div class="flex flex-1 justify-end gap-8">
+                                <div class="flex items-center gap-9">
+                                    <a href="{{ url_for('garden') }}" class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Flowers</a>
+                                    <a href="{{ url_for('home') }}#feature" class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">About Us</a>
+                                </div>
+
+                                <div class="flex gap-2">
+                                    <a href="{{ url_for('basket') }}">
+                                    <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-slate-900 text-sm font-bold leading-normal tracking-[0.015em]">
+                                        <span class="truncate">My Basket</span>
+                                    </button>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </header>
+
+                        <!-- HeroSection -->
+                        <main class="flex flex-col gap-10">
+                            <section class="mt-5">
+                                <div class="p-4">
+                                    <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-4"
+                                        style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://img.freepik.com/premium-photo/flower-shop-interior-with-flowers-3d-render-illustration-cartoon-style_1308175-69049.jpg");'>
+                                        
+                                        <div class="flex flex-col gap-2 text-center">
+                                            <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">
+                                                Welcome to Bloomville!
+                                            </h1>
+                                            <h2 class="text-white text-sm font-normal leading-normal">
+                                                Craft your own enchanted baskets.
+                                            </h2>
+                                        </div>
+                                        <a href="{{ url_for('garden') }}">
+                                        <button class="btn-primary">
+                                            <span class="truncate">Start Your Adventure</span>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Feature Section -->
+                            <section id="feature" class="flex flex-col gap-10 px-4 py-10">
+                                <div class="text-center flex flex-col gap-4 items-center">
+                                    <h1 class="section-heading">Your Magical Flower Adventure</h1>
+                                    <p class="section-subtext">
+                                        Explore our enchanted garden where every bloom has a story and every bouquet is a masterpiece.
+                                    </p>
+                                </div>
+
+                                <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
+                                    <div class="feature-card">
+                                        <div class="feature-img" style='background-image: url("https://www.michlers.com/cdn/shop/products/Spring_Flower_Basket.jpg?crop=center&height=1200&v=1552595561&width=1200");'></div>
+                                        <p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Build Your Dream Basket</p>
+                                        <p class="text-slate-600 dark:text-slate-400 text-sm">Mix and match from a magical selection of flowers to create a unique arrangement.</p>
+                                    </div>
+
+                                    <div class="feature-card">
+                                        <div class="feature-img" style='background-image: url("data:image/jpeg;base64,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");'></div>
+                                        <p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Blooms Delivered in a Flash</p>
+                                        <p class="text-slate-600 dark:text-slate-400 text-sm">Our speedy sprites ensure your flowers arrive fresh and vibrant right at your doorstep.</p>
+                                    </div>
+
+                                    <div class="feature-card">
+                                        <div class="feature-img" style='background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBYcs2hlv3BzfEwNToTWat52ynQ0HWdsc7kA&s");'></div>
+                                        <p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Discover Seasonal Specials</p>
+                                        <p class="text-slate-600 dark:text-slate-400 text-sm">Now buy flowers according to the season with just one click!</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- CTA Section -->
+                            <section class="text-center px-4 py-10">
+                                <h1 class="section-heading">Ready to Enter the Garden?</h1>
+                                <br>
+                                <div class="flex justify-center">
+                                    <a href="{{ url_for('garden') }}"><button class="btn-primary">Explore the Garden</button></a>
+                                </div>
+                            </section>
+                        </main>
+
+                        <!-- Footer -->
+                        <footer class="flex flex-col gap-6 px-5 py-10 text-center mt-10 border-t border-primary/20 dark:border-primary/30">
+                            <div class="flex flex-wrap items-center justify-center gap-6">
+                                <a href="{{ url_for('home') }}#feature" class="footer-link">About Us</a>
+                            </div>
+                        </footer>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
